@@ -3,12 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 /* 1000px */
 @media only screen and (max-width: 62.5em) {
@@ -71,7 +71,8 @@ main {
     border-radius: 0;
     flex-direction: column;
     width: 100dvw;
-    height: 100dvh;
+    height: auto;
+    min-height: 100dvh;
   }
 }
 
@@ -95,7 +96,7 @@ main {
 
 @media only screen and (max-width: 37.5em) {
   .player {
-    padding: 18rem;
+    padding: 12rem 15rem;
   }
 }
 
