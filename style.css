@@ -71,7 +71,7 @@ main {
     border-radius: 0;
     flex-direction: column;
     width: 100dvw;
-    height: 100dvh;
+    height: 80dvh;
   }
 }
 
