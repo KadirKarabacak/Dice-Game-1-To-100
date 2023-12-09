@@ -34,6 +34,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 37.5em) {
+  body {
+    align-items: flex-start;
+  }
+}
 
 /* LAYOUT */
 main {
@@ -56,9 +61,10 @@ main {
 
 @media only screen and (max-width: 37.5em) {
   main {
+    border-radius: 0;
     flex-direction: column;
     width: 60rem;
-    height: 115rem;
+    height: 100dvh;
   }
 }
 
@@ -73,7 +79,7 @@ main {
 
 @media only screen and (max-width: 37.5em) {
   .player {
-    padding: 10rem 0;
+    padding: 20rem 0;
   }
 }
 
@@ -173,6 +179,11 @@ main {
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    font-size: 2.2rem;
+  }
+}
 
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.9);
@@ -187,18 +198,18 @@ main {
 .btn--new {
   top: 2rem;
 }
-/* @media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .btn--new {
-    top: 2rem;
+    top: 6rem;
   }
-} */
+}
 .btn--roll {
   top: 39.3rem;
 }
 @media only screen and (max-width: 37.5em) {
   .btn--roll {
     left: 20%;
-    top: 55rem;
+    top: 76rem;
   }
 }
 .btn--hold {
@@ -208,7 +219,7 @@ main {
   .btn--hold {
     left: unset;
     right: -5rem;
-    top: 55rem;
+    top: 76rem;
   }
 }
 
@@ -237,7 +248,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .dice {
-    top: 52rem;
+    top: 73rem;
   }
 }
 
