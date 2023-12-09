@@ -71,7 +71,7 @@ main {
     border-radius: 0;
     flex-direction: column;
     width: 100dvw;
-    height: auto;
+    height: 100dvh;
     min-height: 100dvh;
   }
 }
@@ -257,12 +257,6 @@ main {
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 0.7rem;
-}
-
-.btn--roll {
-}
-
-.btn--hold {
 }
 
 .btn:active {
