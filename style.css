@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -10,9 +10,22 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+/* 1000px */
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -28,12 +41,25 @@ main {
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+/* 800px */
+@media only screen and (max-width: 50em) {
+  main {
+    width: 75rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  main {
+    flex-direction: column;
+    width: 50rem;
+    height: 115rem;
+  }
 }
 
 .player {
@@ -43,6 +69,11 @@ main {
   flex-direction: column;
   align-items: center;
   transition: all 0.75s;
+}
+@media only screen and (max-width: 37.5em) {
+  .player {
+    padding: 10rem 0;
+  }
 }
 
 /* ELEMENTS */
@@ -54,6 +85,12 @@ main {
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+}
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .name {
+    word-spacing: 0;
+  }
 }
 
 .score {
@@ -87,6 +124,11 @@ main {
   text-align: center;
   transition: all 0.75s;
 }
+@media only screen and (max-width: 37.5em) {
+  .current {
+    width: 40%;
+  }
+}
 
 .current-label {
   text-transform: uppercase;
@@ -114,13 +156,16 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
+  /* background-color: white; */
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .btn::first-letter {
@@ -132,11 +177,29 @@ main {
 .btn--new {
   top: 4rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .btn--new {
+    top: 2rem;
+  }
+}
 .btn--roll {
   top: 39.3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .btn--roll {
+    left: 20%;
+    top: 55rem;
+  }
+}
 .btn--hold {
   top: 46.1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .btn--hold {
+    left: unset;
+    right: -5rem;
+    top: 55rem;
+  }
 }
 
 .btn:active {
@@ -156,6 +219,12 @@ main {
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 37.5em) {
+  .dice {
+    border-radius: 10px;
+    top: 52rem;
+  }
+}
 
 .player--winner {
   background-color: #2f2f2f;
@@ -166,11 +235,11 @@ main {
   color: #c7365f;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.disabled{
+.disabled {
   pointer-events: none;
   opacity: 0.5;
 }
