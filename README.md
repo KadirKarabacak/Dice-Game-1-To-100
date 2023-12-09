@@ -7,6 +7,8 @@ This project is a small dice rolling game.
 
 
 # 🔨 Technologies I used
+<img src="tech-icons/html-icon.png"><img src="tech-icons/css-icon.png"><img src="tech-icons/js-icon.png">
 
+# <p align="center">OVERVIEW</p>
 
-<!--![React-Fast-Pizza](public/pizzas/project-img.png) -->
+![Dice-Game](tech-icons/dice-game.png)
