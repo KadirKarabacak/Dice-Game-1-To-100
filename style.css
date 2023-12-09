@@ -13,7 +13,7 @@ html {
 /* 1000px */
 @media only screen and (max-width: 62.5em) {
   html {
-    font-size: 50%;
+    font-size: 45%;
   }
 }
 
@@ -21,6 +21,13 @@ html {
 @media only screen and (max-width: 37.5em) {
   html {
     font-size: 40%;
+  }
+}
+
+/* 400px */
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 35%;
   }
 }
 
@@ -63,7 +70,7 @@ main {
   main {
     border-radius: 0;
     flex-direction: column;
-    width: 60rem;
+    width: 100dvw;
     height: 100dvh;
   }
 }
@@ -77,9 +84,18 @@ main {
   transition: all 0.75s;
 }
 
+@media only screen and (max-width: 50em) {
+  .player {
+    padding: 7rem 7rem 7rem 0;
+  }
+  .player--1 {
+    padding: 7rem 0 7rem 7rem;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .player {
-    padding: 20rem 0;
+    padding: 18rem;
   }
 }
 
@@ -115,6 +131,12 @@ main {
   color: #c7365f;
   margin-bottom: auto;
 }
+@media only screen and (max-width: 37.5em) {
+  .score {
+    margin-bottom: 0;
+    margin: auto;
+  }
+}
 
 .player--active {
   background-color: rgba(255, 255, 255, 0.4);
@@ -142,7 +164,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .current {
-    width: 30%;
+    width: 20rem;
   }
 }
 
@@ -157,12 +179,47 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
-.btn {
+.btn-container {
   display: flex;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 37.5em) {
+  .btn-container {
+    flex-direction: row;
+    width: 100dvw;
+    height: auto;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .btn-container {
+    padding: 0 1.5rem;
+  }
+}
+
+.sub-btn-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 10rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .sub-btn-container {
+    height: 14rem;
+  }
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  display: flex;
   color: #444;
   background: none;
   border: none;
@@ -183,6 +240,12 @@ main {
   .btn {
     font-size: 2.2rem;
   }
+  /* .btn--new {
+    position: relative;
+    top: 60rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
 }
 
 .btn:hover {
@@ -195,36 +258,14 @@ main {
   margin-right: 0.7rem;
 }
 
-.btn--new {
-  top: 2rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .btn--new {
-    top: 6rem;
-  }
-}
 .btn--roll {
-  top: 39.3rem;
 }
-@media only screen and (max-width: 37.5em) {
-  .btn--roll {
-    left: 20%;
-    top: 76rem;
-  }
-}
+
 .btn--hold {
-  top: 46.1rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .btn--hold {
-    left: unset;
-    right: -5rem;
-    top: 76rem;
-  }
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  /* transform: translate(-50%, 3px); */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
@@ -233,22 +274,15 @@ main {
 }
 
 .dice {
-  position: absolute;
-  left: 50%;
-  top: 16.5rem;
-  transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-@media only screen and (max-width: 50em) {
-  .dice {
-    top: 21rem;
-  }
-}
 @media only screen and (max-width: 37.5em) {
   .dice {
-    top: 73rem;
+    position: relative;
+    right: 2.5rem;
+    height: 12rem;
   }
 }
 
@@ -262,7 +296,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
 }
 
 .disabled {
