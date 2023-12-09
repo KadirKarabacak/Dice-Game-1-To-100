@@ -57,7 +57,7 @@ main {
 @media only screen and (max-width: 37.5em) {
   main {
     flex-direction: column;
-    width: 50rem;
+    width: 60rem;
     height: 115rem;
   }
 }
@@ -70,6 +70,7 @@ main {
   align-items: center;
   transition: all 0.75s;
 }
+
 @media only screen and (max-width: 37.5em) {
   .player {
     padding: 10rem 0;
@@ -80,11 +81,20 @@ main {
 .name {
   position: relative;
   font-size: 4rem;
+  padding: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+  background: #e54967;
+  border-radius: 6px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 50em) {
+  .name {
+    font-size: 3.5rem;
+  }
 }
 /* 600px */
 @media only screen and (max-width: 37.5em) {
@@ -126,7 +136,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .current {
-    width: 40%;
+    width: 30%;
   }
 }
 
@@ -143,6 +153,7 @@ main {
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
+  display: flex;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -156,7 +167,6 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  /* background-color: white; */
   background-color: rgba(255, 255, 255, 0.6);
 
   padding: 0.7rem 2.5rem;
@@ -175,13 +185,13 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: 2rem;
 }
-@media only screen and (max-width: 37.5em) {
+/* @media only screen and (max-width: 37.5em) {
   .btn--new {
     top: 2rem;
   }
-}
+} */
 .btn--roll {
   top: 39.3rem;
 }
@@ -218,10 +228,15 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 50em) {
+  .dice {
+    top: 21rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .dice {
-    border-radius: 10px;
     top: 52rem;
   }
 }

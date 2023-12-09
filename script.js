@@ -22,6 +22,7 @@ let playing = true;
 let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+const winPoint = 101;
 
 const switchPlayer = function () {
   document.querySelector(`#current--${activePlayer}`).textContent = 0;
@@ -59,7 +60,7 @@ btnHold.addEventListener("click", function () {
     // scores[1] = scores[1] + currentScore;
     document.querySelector(`#score--${activePlayer}`).textContent =
       scores[activePlayer];
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= winPoint) {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
