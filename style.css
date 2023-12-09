@@ -71,12 +71,12 @@ main {
     border-radius: 0;
     flex-direction: column;
     width: 100dvw;
-    height: 80dvh;
+    height: 100dvh;
   }
 }
 
 .player {
-  flex: 50%;
+  /* flex: 50%; */
   padding: 9rem;
   display: flex;
   flex-direction: column;
